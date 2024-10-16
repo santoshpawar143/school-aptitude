@@ -24,13 +24,15 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery-ui.js"></script>
     <link href="assets/css/jquery-ui.css" rel="stylesheet">
-    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    {{-- <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script> --}}
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
     {{-- jquery --}}
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('sweetAlert/sweetalert2.min.css') }}">
     <script src="{{ asset('sweetAlert/sweetalert2.all.min.js') }}"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    {{-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"> --}}
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 

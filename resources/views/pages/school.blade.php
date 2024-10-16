@@ -13,7 +13,7 @@
 
 @section('content')
     <script src="{{ asset('assets/js/school.js') }}" type="text/javascript"></script>
-    <div class="pagetitle">
+    {{-- <div class="pagetitle">
         <h1>Schools</h1>
         <nav>
             <ol class="breadcrumb">
@@ -21,9 +21,19 @@
                 <li class="breadcrumb-item active">School</li>
             </ol>
         </nav>
-    </div><!-- End Page Title -->
+    </div><!-- End Page Title --> --}}
 
     <section class="section dashboard">
+        <div class=" col-sm-3 m-3">
+            <div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h6 class="card-title">Schools List</h6>
+                    <button type="button" class="btn pro-btn" id="school_modalbtn">
+                        <i class="bi bi-plus-lg"></i> ADD SCHOOLE
+                    </button>
+                </div>
+            </div>
+        </div>
         <div class="row">
 
             <!-- Left side columns -->
@@ -40,11 +50,7 @@
                         <div class="card recent-sales overflow-auto">
 
                             {{-- modal trigger button --}}
-                            <div class="card col-sm-2 m-3">
-                                <button type="button" class="btn btn-primary " id='school_modalbtn'>
-                                    Add School
-                                </button>
-                            </div>
+
                             {{-- modal-form-start --}}
 
 
@@ -54,9 +60,9 @@
                             <div class="modal fade" id="school_modalId" tabindex="-1" data-bs-backdrop="static"
                                 data-bs-keyboard="false" role="dialog" aria-labelledby="school_modalTitleId"
                                 aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-scrollable " role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
+                                <div class="modal-dialog modal-dialog-scrollable modal-xl-custom" role="document">
+                                    <div class="modal-content add-popup-bg custom-rounded">
+                                        <div class="modal-header add-card-bg">
                                             <h5 class="modal-title" id="school_modalTitleId">
                                                 Create School
                                             </h5>
@@ -67,23 +73,25 @@
                                             <form id="schoolForm">
                                                 <div class="mb-3">
                                                     <label for="school_name" class="form-label">School Name</label>
-                                                    <input type="text" class="form-control" name="school_name"
-                                                        id="school_name" aria-describedby="helpId"
-                                                        placeholder="Enter School Name" required />
-                                                    <input type="hidden" class="form-control" name="id" id="school_id"
-                                                        aria-describedby="helpId" required />
+                                                    <input type="text"
+                                                        class="form-control form-control-lg custom-rounded"
+                                                        name="school_name" id="school_name" aria-describedby="helpId"
+                                                        placeholder="-" required />
+                                                    <input type="hidden" class="form-control " name="id"
+                                                        id="school_id" aria-describedby="helpId" required />
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="school_address" class="form-label">School Address</label>
-                                                    <input type="text" class="form-control" name="school_address"
-                                                        id="school_address" aria-describedby="helpId"
-                                                        placeholder="Enter School Address" required />
+                                                    <input type="text"
+                                                        class="form-control form-control-lg custom-rounded"
+                                                        name="school_address" id="school_address" aria-describedby="helpId"
+                                                        placeholder="-" required />
 
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="school_logo">Upload Logo</label>
                                                     <input type="file" name="school_logo" id="school_logo"
-                                                        class="form-control">
+                                                        class="form-control form-control-lg custom-rounded">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="school_board_table" class="form-label">Boards</label>
@@ -100,7 +108,7 @@
                                                     <table id='school_standard_table'>
                                                     </table>
                                                 </div>
-                                                <button id='school_sub_btn' class="btn btn-primary">Submit</button>
+                                                <button id='school_sub_btn' class="btn pro-btn">Submit</button>
                                             </form>
                                         </div>
                                         <div class="modal-footer">
@@ -118,7 +126,7 @@
                             <div class="card-body">
 
 
-                                <table id="schoolTable" class="table ">
+                                <table id="schoolTable" class="datatable">
                                     <thead>
                                         <tr>
                                             <th>id</th> <!-- Added Agent Code -->

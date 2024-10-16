@@ -13,7 +13,7 @@
 
 @section('content')
     <script src="{{ asset('assets/js/teacher_subject.js') }}" type="text/javascript"></script>
-    <div class="pagetitle">
+    {{-- <div class="pagetitle">
         <h1>Teachers</h1>
         <nav>
             <ol class="breadcrumb">
@@ -21,9 +21,21 @@
                 <li class="breadcrumb-item active">Teacher subject</li>
             </ol>
         </nav>
-    </div><!-- End Page Title -->
+    </div><!-- End Page Title --> --}}
 
     <section class="section dashboard">
+
+        <div class=" col-sm-3 m-3">
+            <div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h6 class="card-title">Subject List</h6>
+                    <button type="button" class="btn pro-btn" id="stdmodalbtn" data-bs-toggle="modal"
+                        data-bs-target="#TeacherSubjectmodalId">
+                        <i class="bi bi-plus-lg"></i> ASSIGN SUBJECT
+                    </button>
+                </div>
+            </div>
+        </div>
         <div class="row">
 
             <!-- Left side columns -->
@@ -39,14 +51,7 @@
                     <div class="col-12">
                         <div class="card recent-sales overflow-auto">
 
-                            {{-- modal trigger button --}}
-                            <div class="card col-sm-2 m-3">
-                                <button type="button" class="btn btn-primary" id="stdmodalbtn" data-bs-toggle="modal"
-                                    data-bs-target="#TeacherSubjectmodalId">
-                                    Add subject to teacher
-                                </button>
-                            </div>
-                            {{-- modal-form-start --}}
+
 
 
 
@@ -54,9 +59,9 @@
                             <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
                             <div class="modal fade" id="TeacherSubjectmodalId" tabindex="-1" data-bs-backdrop="static"
                                 data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-scrollable " role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
+                                <div class="modal-dialog modal-dialog-scrollable modal-xl-custom" role="document">
+                                    <div class="modal-content add-popup-bg custom-rounded">
+                                        <div class="modal-header add-card-bg">
                                             <h5 class="modal-title" id="modalTitleId">
                                                 Teacher subject
                                             </h5>
@@ -69,8 +74,10 @@
                                                     <label for="teacher_name" class="form-label">Select Teacher</label>
                                                     <input type="hidden" class="form-control" id="teacher_id"
                                                         name="teacher_id">
-                                                    <input type="text" class="form-control" id="teacher_name"
-                                                        name="teacher_name" required placeholder="Enter Teacher Name">
+                                                    <input type="text"
+                                                        class="form-control form-control-bg custom-rounded"
+                                                        id="teacher_name" name="teacher_name" required
+                                                        placeholder="Enter Teacher Name">
                                                 </div>
 
 
@@ -98,7 +105,7 @@
 
                                                     </div>
                                                 </div>
-                                                <button id="stdsubmit" class="btn btn-primary">Create</button>
+                                                <button id="stdsubmit" class="btn pro-btn">Create</button>
                                                 {{-- <button id="stdupdate" class="btn btn-primary">Update</button> --}}
                                             </form>
                                         </div>
@@ -118,34 +125,34 @@
                                 <div class="row mb-3">
                                     <div class=" col-sm-2">
                                         <label for="filter_test_subject" class="form-label">Board</label>
-                                        <select class="form-select form-select filter_student" name="filter_teacher_board"
+                                        <select class="form-select  custom-rounded" name="filter_teacher_board"
                                             id="filter_teacher_board">
 
                                         </select>
                                     </div>
                                     <div class="col-sm-2">
                                         <label for="filter_test_medium" class="form-label">Medium</label>
-                                        <select class="form-select form-select filter_student" name="filter_teacher_medium"
+                                        <select class="form-select  custom-rounded" name="filter_teacher_medium"
                                             id="filter_teacher_medium">
 
                                         </select>
                                     </div>
                                     <div class="col-sm-2">
                                         <label for="test_standard" class="form-label">Standard</label>
-                                        <select class="form-select form-select" name="filter_teacher_standard"
+                                        <select class="form-select  custom-rounded" name="filter_teacher_standard"
                                             id="filter_teacher_standard">
 
                                         </select>
                                     </div>
                                     <div class="col-sm-2">
                                         <label for="test_standard" class="form-label">Subject</label>
-                                        <select class="form-select form-select" name="filter_teacher_subject"
+                                        <select class="form-select  custom-rounded" name="filter_teacher_subject"
                                             id="filter_teacher_subject">
 
                                         </select>
                                     </div>
                                     <div class="col-sm-2 align-self-center">
-                                        <button type="button" class="btn btn-primary" id='filter'>
+                                        <button type="button" class="btn pro-btn" id='filter'>
                                             Search
                                         </button>
 

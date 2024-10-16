@@ -13,7 +13,7 @@
 
 @section('content')
     <script src="{{ asset('assets/js/student.js') }}" type="text/javascript"></script>
-    <div class="pagetitle">
+    {{-- <div class="pagetitle">
         <h1>Students</h1>
         <nav>
             <ol class="breadcrumb">
@@ -21,9 +21,19 @@
                 <li class="breadcrumb-item active">Apptiude</li>
             </ol>
         </nav>
-    </div><!-- End Page Title -->
+    </div><!-- End Page Title --> --}}
 
     <section class="section dashboard">
+        <div class=" col-sm-3 m-3">
+            <div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h6 class="card-title">Subject List</h6>
+                    <button type="button" class="btn pro-btn" id="stdmodalbtn">
+                        <i class="bi bi-plus-lg"></i> ADD STUDENT
+                    </button>
+                </div>
+            </div>
+        </div>
         <div class="row">
 
             <!-- Left side columns -->
@@ -39,13 +49,6 @@
                     <div class="col-12">
                         <div class="card recent-sales overflow-auto">
 
-                            {{-- modal trigger button --}}
-                            <div class="card col-sm-2 m-3">
-                                <button type="button" class="btn btn-primary " id='stdmodalbtn' data-bs-toggle="modal">
-                                    Add Student
-                                </button>
-                            </div>
-                            {{-- modal-form-start --}}
 
 
 
@@ -53,8 +56,8 @@
                             <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
                             <div class="modal fade" id="StudentmodalId" tabindex="-1" data-bs-backdrop="static"
                                 data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-scrollable " role="document">
-                                    <div class="modal-content">
+                                <div class="modal-dialog modal-dialog-scrollable modal-xl-custom" role="document">
+                                    <div class="modal-content add-popup-bg custom-rounded">
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="modalTitleId">
                                                 Student
@@ -68,47 +71,53 @@
                                                     <label for="student_name" class="form-label">Student Name</label>
                                                     <input type="hidden" class="form-control" id="student_id"
                                                         name="student_id">
-                                                    <input type="text" class="form-control" id="student_name"
-                                                        name="student_name" required placeholder="Enter Student Name">
+                                                    <input type="text"
+                                                        class="form-control form-control-lg custom-rounded"
+                                                        id="student_name" name="student_name" required placeholder="-">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="student_roll_no" class="form-label">Roll no</label>
-                                                    <input type="text" class="form-control" id="student_roll_no"
-                                                        name="student_roll_no" required placeholder="Enter Roll Number">
+                                                    <input type="text"
+                                                        class="form-control form-control-lg custom-rounded"
+                                                        id="student_roll_no" name="student_roll_no" required
+                                                        placeholder="-">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="student_roll_no" class="form-label">email</label>
-                                                    <input type="text" class="form-control" id="student_email"
-                                                        name="student_email" required placeholder="Enter email">
+                                                    <input type="text"
+                                                        class="form-control form-control-lg custom-rounded"
+                                                        id="student_email" name="student_email" required placeholder="-">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="student_roll_no" class="form-label">password</label>
-                                                    <input type="text" class="form-control" id="student_password"
-                                                        name="student_password" required placeholder="Enter password">
+                                                    <input type="text"
+                                                        class="form-control form-control-lg custom-rounded"
+                                                        id="student_password" name="student_password" required
+                                                        placeholder="-">
                                                 </div>
                                                 <div class=" col">
                                                     <label for="filter_test_subject" class="form-label">Board</label>
-                                                    <select class="form-select form-select filter_student"
+                                                    <select class="form-select form-select-lg custom-rounded"
                                                         name="student_board" id="student_board">
 
                                                     </select>
                                                 </div>
                                                 <div class=" col">
                                                     <label for="filter_test_medium" class="form-label">Medium</label>
-                                                    <select class="form-select form-select " name="student_medium"
-                                                        id="student_medium">
+                                                    <select class="form-select form-select-lg custom-rounded"
+                                                        name="student_medium" id="student_medium">
 
                                                     </select>
                                                 </div>
                                                 <div class="col mb-3">
                                                     <label for="test_standard" class="form-label">Standard</label>
-                                                    <select class="form-select form-select" name="student_standard"
-                                                        id="student_standard">
+                                                    <select class="form-select form-select-lg custom-rounded"
+                                                        name="student_standard" id="student_standard">
 
                                                     </select>
                                                 </div>
-                                                <button id="stdsubmit" class="btn btn-primary">Submit</button>
-                                                <button id="stdupdate" class="btn btn-primary">Update</button>
+                                                <button id="stdsubmit" class="btn pro-btn">Submit</button>
+                                                <button id="stdupdate" class="btn pro-btn">Update</button>
                                             </form>
                                         </div>
                                         <div class="modal-footer">
@@ -124,37 +133,37 @@
 
                             {{-- modal-form-end --}}
                             <div class="card-body">
-                                <div class="row mb-3">
+                                <div class="row mb-3 p-3">
                                     <div class=" col-sm-2">
                                         <label for="filter_test_subject" class="form-label">Board</label>
-                                        <select class="form-select form-select filter_student" name="filter_student_board"
-                                            id="filter_student_board">
+                                        <select class="form-select form-select-lg custom-rounded filter_student"
+                                            name="filter_student_board" id="filter_student_board">
 
                                         </select>
                                     </div>
                                     <div class="col-sm-2">
                                         <label for="filter_test_medium" class="form-label">Medium</label>
-                                        <select class="form-select form-select filter_student"
+                                        <select class="form-select form-select-lg custom-rounded filter_student"
                                             name="filter_student_medium" id="filter_student_medium">
 
                                         </select>
                                     </div>
                                     <div class="col-sm-2">
                                         <label for="test_standard" class="form-label">Standard</label>
-                                        <select class="form-select form-select" name="filter_student_standard"
-                                            id="filter_student_standard">
+                                        <select class="form-select form-select-lg custom-rounded filter_student"
+                                            name="filter_student_standard" id="filter_student_standard">
 
                                         </select>
                                     </div>
                                     <div class="col-sm-2 align-self-center">
-                                        <button type="button" class="btn btn-primary" id='filter'>
+                                        <button type="button" class="btn pro-btn" id='filter'>
                                             Search
                                         </button>
 
                                     </div>
                                 </div>
 
-                                <table id="studentTable" class="table">
+                                <table id="studentTable" class="datatable">
                                     <thead>
                                         <tr>
                                             <th>id</th>

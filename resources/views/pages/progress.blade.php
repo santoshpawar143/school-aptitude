@@ -13,7 +13,7 @@
 
 @section('content')
     <script src="{{ asset('assets/js/progress.js') }}" type="text/javascript"></script>
-    <div class="pagetitle">
+    {{-- <div class="pagetitle">
         <h1>Progress</h1>
         <nav>
             <ol class="breadcrumb">
@@ -21,7 +21,7 @@
                 <li class="breadcrumb-item active">Syllabus</li>
             </ol>
         </nav>
-    </div><!-- End Page Title -->
+    </div><!-- End Page Title --> --}}
 
     <section class="section dashboard">
         <div class="row">
@@ -47,7 +47,8 @@
 
                                     <div class="mb-3 col-md-3 col-12">
                                         <label for="" class="form-label">Select a subject</label>
-                                        <select class="form-select form-select" name="student_subject" id="student_subject">
+                                        <select class="form-select form-select custom-rounded" name="student_subject"
+                                            id="student_subject">
 
                                         </select>
                                     </div>

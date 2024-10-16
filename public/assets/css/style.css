@@ -606,7 +606,7 @@ h6 {
   width: 300px;
   z-index: 996;
   transition: all 0.3s;
-  
+  padding-top: 20px;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #aab7cf transparent;
@@ -661,6 +661,12 @@ h6 {
   margin: 0;
   list-style: none;
 }
+@media (max-width: 768px) {
+  .sidebar{
+    background-color: #f0f0f0;
+    /* Change this to your desired background color */
+  }
+}
 
 .sidebar-nav li {
   padding: 0;
@@ -685,7 +691,7 @@ h6 {
   align-items: center;
   font-size: 15px;
   font-weight: 600;
-
+padding: 15px;
   transition: 0.3;
   
 border-left: 7px solid transparent;
@@ -816,11 +822,12 @@ border-left: 7px solid #7c32ff;
   padding: 0;
 }
 .dashboard .info-card:hover {
-  background: linear-gradient(to right, rgb(53, 22, 129), rgba(198, 111, 235, 0.293)), url('/assets/img/body-bg.jpg');
-  background-size: cover;
+  
+  background-image:url('/assets/img/modal-header-bg.png');
+  background-size:cover;
 color:white;
-  background-position: center;
-  transition: background 0.3s ease;
+  background-position: top right;
+  transition: all 0.5s ease 0s;
 }
 .dashboard .info-card:hover h6 {
   color: white;
@@ -1247,3 +1254,550 @@ color:white;
   font-size: 13px;
   color: #012970;
 }
+/* table */
+.QA_section_white.QA_section .QA_table .table {
+  box-shadow: none !important
+}
+
+.QA_section .QA_table .table {
+  background: #fff;
+  box-shadow: 0 10px 15px rgba(235, 215, 241, .22);
+  border-radius: 10px;
+  margin-bottom: 35px;
+  padding-top: 20px;
+  padding-bottom: 40px
+}
+
+.QA_section .QA_table td,
+.QA_section .QA_table th {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: #222;
+  padding: 16px 30px;
+  vertical-align: middle;
+  position: relative
+}
+
+.QA_section .QA_table .question_content {
+  color: #828bb2;
+  font-size: 13px
+}
+
+.QA_section .QA_table .question_content:hover {
+  color: #415094
+}
+
+.QA_section .QA_table thead th {
+  font-weight: 500;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(130, 139, 178, .3) !important;
+  padding-left: 45px !important
+}
+
+.QA_section .QA_table tbody th {
+  font-size: 14px;
+  color: #415094;
+  font-weight: 500 !important
+}
+
+.QA_section .QA_table tbody td,
+.QA_section .QA_table tbody th {
+  font-size: 14px;
+  color: #828bb2;
+  border-bottom: 1px solid rgba(130, 139, 178, .15)
+}
+
+.QA_section .QA_table tbody td a,
+.QA_section .QA_table tbody th a {
+  font-size: 14px;
+  font-weight: 300;
+  color: #828bb2
+}
+
+.QA_section .QA_table tbody td a.active_hover,
+.QA_section .QA_table tbody td a:hover,
+.QA_section .QA_table tbody th a.active_hover,
+.QA_section .QA_table tbody th a:hover {
+  color: #7c32ff
+}
+
+.QA_section .QA_table tbody td.pending,
+.QA_section .QA_table tbody th.pending {
+  color: #e09079;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 300
+}
+
+.QA_section .QA_table tbody td.priority_hight,
+.QA_section .QA_table tbody th.priority_hight {
+  font-size: 14px;
+  color: #d7598f;
+  font-weight: 400
+}
+
+.QA_section .QA_table tbody tr {
+  transition: .3s
+}
+
+.QA_section .QA_table tbody tr:hover {
+  background: #fff
+}
+
+.QA_section .QA_table .view_btn {
+  color: #415094
+}
+
+.QA_section .QA_table .view_btn:hover {
+  text-decoration: underline
+}
+
+.QA_section .QA_table .table {
+  margin-bottom: 0 !important
+}
+
+.QA_section .QA_table .table thead th {
+  background-color: #fff;
+  padding: 17px 30px;
+  line-height: 16px;
+  border: 0 solid transparent;
+  font-size: 12px;
+  font-weight: 500;
+  color: #415094;
+  white-space: nowrap;
+  text-transform: uppercase
+}
+
+.QA_section3 .QA_table .table {
+  background: #fff;
+  box-shadow: 0 10px 15px rgba(235, 215, 241, .22);
+  border-radius: 10px;
+  margin-bottom: 35px;
+  padding-top: 20px;
+  padding-bottom: 40px
+}
+
+.QA_section3 .QA_table td,
+.QA_section3 .QA_table th {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: #222;
+  padding: 16px 30px;
+  vertical-align: middle;
+  position: relative
+}
+
+.QA_section3 .QA_table .question_content {
+  color: #828bb2;
+  font-size: 13px
+}
+
+.QA_section3 .QA_table .question_content:hover {
+  color: #415094
+}
+
+.QA_section3 .QA_table thead th {
+  font-weight: 500 !important;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(130, 139, 178, .3) !important
+}
+
+.QA_section3 .QA_table tbody th {
+  font-size: 14px;
+  color: #415094 !important;
+  font-weight: 500 !important
+}
+
+.QA_section3 .QA_table tbody td,
+.QA_section3 .QA_table tbody th {
+  font-size: 14px;
+  color: #828bb2;
+  font-weight: 300;
+  border-bottom: 1px solid rgba(130, 139, 178, .15)
+}
+
+.QA_section3 .QA_table tbody td a,
+.QA_section3 .QA_table tbody th a {
+  font-size: 14px;
+  font-weight: 300;
+  color: #828bb2
+}
+
+.QA_section3 .QA_table tbody td a.active_hover,
+.QA_section3 .QA_table tbody td a:hover,
+.QA_section3 .QA_table tbody th a.active_hover,
+.QA_section3 .QA_table tbody th a:hover {
+  color: #7c32ff
+}
+
+.QA_section3 .QA_table tbody td.pending,
+.QA_section3 .QA_table tbody th.pending {
+  color: #e09079;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500
+}
+
+.QA_section3 .QA_table tbody td.priority_hight,
+.QA_section3 .QA_table tbody th.priority_hight {
+  font-size: 14px;
+  color: #d7598f;
+  font-weight: 400
+}
+
+.QA_section3 .QA_table tbody tr {
+  transition: .3s
+}
+
+.QA_section3 .QA_table tfoot td,
+.QA_section3 .QA_table tfoot th {
+  font-weight: 500;
+  color: #415094;
+  font-size: 16px
+}
+
+.QA_section3 .QA_table .view_btn {
+  color: #415094
+}
+
+.QA_section3 .QA_table .view_btn:hover {
+  text-decoration: underline
+}
+
+.QA_section3 .QA_table .table {
+  margin-bottom: 0 !important
+}
+
+.QA_section3 .QA_table .table thead th {
+  padding: 7px 30px 20px;
+  line-height: 16px;
+  border: 0 solid transparent;
+  font-size: 12px;
+  font-weight: 500;
+  color: #415094;
+  white-space: nowrap;
+  text-transform: uppercase
+}
+
+.QA_section2 .QA_table .table {
+  background: #fff;
+  box-shadow: 0 10px 15px rgba(235, 215, 241, .22);
+  border-radius: 10px;
+  margin-bottom: 35px;
+  padding-top: 20px;
+  padding-bottom: 40px
+}
+
+.QA_section2 .QA_table td,
+.QA_section2 .QA_table th {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.9;
+  color: #222;
+  padding: 16px 30px;
+  vertical-align: middle;
+  position: relative
+}
+
+.QA_section2 .QA_table .question_content {
+  color: #828bb2;
+  font-size: 13px
+}
+
+.QA_section2 .QA_table .question_content:hover {
+  color: #415094
+}
+
+.QA_section2 .QA_table thead th {
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(130, 139, 178, .3) !important
+}
+
+.QA_section2 .QA_table tbody th {
+  font-size: 14px;
+  color: #415094 !important;
+  font-weight: 400 !important
+}
+
+.QA_section2 .QA_table tbody td,
+.QA_section2 .QA_table tbody th {
+  font-size: 14px;
+  color: #828bb2;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(130, 139, 178, .15)
+}
+
+.QA_section2 .QA_table tbody td a,
+.QA_section2 .QA_table tbody th a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #828bb2
+}
+
+.QA_section2 .QA_table tbody td a.active_hover,
+.QA_section2 .QA_table tbody td a:hover,
+.QA_section2 .QA_table tbody th a.active_hover,
+.QA_section2 .QA_table tbody th a:hover {
+  color: #7c32ff
+}
+
+.QA_section2 .QA_table tbody td.pending,
+.QA_section2 .QA_table tbody th.pending {
+  color: #e09079;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500
+}
+
+.QA_section2 .QA_table tbody td.priority_hight,
+.QA_section2 .QA_table tbody th.priority_hight {
+  font-size: 14px;
+  color: #d7598f;
+  font-weight: 400
+}
+
+.QA_section2 .QA_table tbody tr {
+  transition: .3s
+}
+
+.QA_section2 .QA_table tfoot td,
+.QA_section2 .QA_table tfoot th {
+  font-weight: 500;
+  color: #415094;
+  font-size: 16px
+}
+
+.QA_section2 .QA_table .view_btn {
+  color: #415094
+}
+
+.QA_section2 .QA_table .view_btn:hover {
+  text-decoration: underline
+}
+
+.QA_section2 .QA_table .table {
+  margin-bottom: 0 !important
+}
+
+.QA_section2 .QA_table .table thead th {
+  padding: 35px 30px 20px;
+  line-height: 16px;
+  border: 0 solid transparent;
+  font-size: 12px;
+  font-weight: 400;
+  color: #415094;
+  white-space: nowrap;
+  text-transform: uppercase
+}
+
+.common_QA_section .QA_table .table {
+  background: #fff;
+  box-shadow: 0 10px 15px rgba(235, 215, 241, .22);
+  border-radius: 10px;
+  margin-bottom: 35px;
+  padding-top: 20px;
+  padding-bottom: 40px
+}
+
+.common_QA_section .QA_table td,
+.common_QA_section .QA_table th {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.9;
+  color: #222;
+  padding: 16px 40px;
+  vertical-align: middle;
+  position: relative
+}
+
+.common_QA_section .QA_table .question_content {
+  color: #828bb2;
+  font-size: 13px
+}
+
+.common_QA_section .QA_table .question_content:hover {
+  color: #415094
+}
+
+.common_QA_section .QA_table thead th {
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(130, 139, 178, .3) !important
+}
+
+.common_QA_section .QA_table tbody th {
+  font-size: 14px;
+  color: #415094 !important;
+  font-weight: 400 !important
+}
+
+.common_QA_section .QA_table tbody td,
+.common_QA_section .QA_table tbody th {
+  font-size: 14px;
+  color: #828bb2;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(130, 139, 178, .15);
+  padding-left: 40px !important
+}
+
+.common_QA_section .QA_table tbody td a,
+.common_QA_section .QA_table tbody th a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #828bb2
+}
+
+.common_QA_section .QA_table tbody td a.active_hover,
+.common_QA_section .QA_table tbody td a:hover,
+.common_QA_section .QA_table tbody th a.active_hover,
+.common_QA_section .QA_table tbody th a:hover {
+  color: #7c32ff
+}
+
+.common_QA_section .QA_table tbody td.pending,
+.common_QA_section .QA_table tbody th.pending {
+  color: #e09079;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500
+}
+
+.common_QA_section .QA_table tbody td.priority_hight,
+.common_QA_section .QA_table tbody th.priority_hight {
+  font-size: 14px;
+  color: #d7598f;
+  font-weight: 400
+}
+
+.common_QA_section .QA_table tbody tr {
+  transition: .3s
+}
+
+.common_QA_section .QA_table tfoot td,
+.common_QA_section .QA_table tfoot th {
+  font-weight: 500;
+  color: #415094;
+  font-size: 16px
+}
+
+.common_QA_section .QA_table .view_btn {
+  color: #415094
+}
+
+.common_QA_section .QA_table .view_btn:hover {
+  text-decoration: underline
+}
+
+.common_QA_section .QA_table .table {
+  margin-bottom: 0 !important
+}
+
+.common_QA_section .QA_table .table thead th {
+  padding: 17px 30px 20px 45px;
+  line-height: 16px;
+  border: 0 solid transparent;
+  font-size: 12px;
+  font-weight: 400;
+  color: #415094;
+  white-space: nowrap;
+  text-transform: uppercase
+}
+
+.check_box_table .QA_table .table tbody th:first-child,
+.check_box_table .QA_table .table thead th:first-child {
+  padding-left: 35px
+}
+/* my css */
+/* input fields */
+.pro-btn {
+  background: linear-gradient(to right, #7c32ff, #c738d8 71%);
+  border: transparent;
+  border-radius: 20px;
+  width: 200px;
+  color: white;
+  /* transition: all 0.4s ease, box-shadow 0.4s ease; */
+  /* Smooth transition for background and shadow */
+  transition: all 0.4s ease, box-shadow 0.4s ease;
+}
+
+.pro-btn:hover {
+  background-image: linear-gradient(90deg, #c738d8, #7c32ff 71%);
+  color: white;
+  box-shadow: 0 0 10px rgba(199, 56, 216, 0.7), 0 0 20px rgba(124, 50, 255, 0.7);
+ 
+}
+.custom-rounded {
+  border-radius: 15px;
+  /* Set border radius to 20px */
+}
+.add-card-bg{
+  background-image: url('/assets/img/modal-header-bg.png');
+  background-size: cover;
+    color: white;
+    background-position: center;
+    transition: all 0.5s ease 0s;
+}
+.add-popup-bg{
+  background-image: url('/assets/img/popup_menu_bg.png');
+    background-size: cover;
+  
+    background-position: center;
+    transition: all 0.5s ease 0s;
+}
+/* Table container */
+.dataTable {
+  width: 100%;
+  font-size: 14px;
+  border-collapse: collapse;
+color: rgba(130, 129, 129, 0.875);
+    /* Ensures borders are not doubled */
+    border: none;
+    border-radius: 20px;
+    /* background-image: url('/assets/img/popup_menu_bg.png');
+      background-size: cover;
+        background-position: bottom; */
+}
+
+/* Table header */
+.dataTable th {
+ 
+  /* Header background */
+  color: white;
+  /* Header text color */
+  padding: 10px;
+  text-align: left;
+}
+.dataTable thead tr {
+  margin-top: 20px;
+  height: 70px;
+  text-align: center;
+  background-image: url('/assets/img/modal-header-bg.png');
+    background-size: cover;
+    background-position: center;
+  color: white;
+}
+.dataTable tbody tr {
+  margin-top: 20px;
+  height: 70px;
+
+}
+/* Table rows */
+
+
+
+
+/* Table cells */
+.dataTable td {
+  height: 20px;
+  border-bottom: 1px solid rgba(221, 221, 221, 0.5);
+  /* Cell border */
+}
+ .modal-xl-custom {
+   max-width: 55%;
+   /* Adjust this value to make the modal bigger or smaller */
+ }
+  .modal-header {
+  padding: 40px;
+   /* Adjust this value to make the modal bigger or smaller */
+ }
